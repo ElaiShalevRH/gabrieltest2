@@ -1,0 +1,17 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gabrieltest2
+  annotations:
+    backstage.io/kubernetes-id: gabrieltest2
+    backstage.io/kubernetes-label-selector: 'app=spring-petclinic'
+    backstage.io/kubernetes-namespace: 'spring-petclinic-dev'
+    argocd/app-selector: rht-gitops.com/janus-argocd=gabrieltest2
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: ElaiShalevRH/gabrieltest2
+spec:
+  type: api
+  system: system:default/janus-orchestrator
+  lifecycle: production
+  owner: user:default/gabriel-farache
